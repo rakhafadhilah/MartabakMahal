@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Page Kedua</title>
     <style>
         body{
@@ -41,7 +42,48 @@
         .lilspace{
             margin: 10px 0 10px 0;
         }
-
+        .search-container{
+            color: #222222;
+            margin-top: 15px;
+            height: 50px;
+        }
+        .search-container input[type="text"]{
+            width: 90%;
+            padding-left: 20px;
+            background-color: #ffffff;
+        }
+        .search-container button {
+            float: right;
+            padding: 14px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            margin-top: 0;
+            cursor: pointer;
+        }
+        .darkgrey{
+            background-color: #424242;
+        }
+        .boxes{
+            width: 23%;
+            margin: 10px 10px 10px 0;
+            height: 200px;
+            background-color: white;
+            display: grid; 
+            grid-template-rows: 2fr 9fr 2fr;
+            justify-items: center;
+        }
+        .title{
+            color:white;
+            margin-top: -10px;
+            font-weight: 700;
+        }
+        .gridbox{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
     
     </style>
 </head>
@@ -82,9 +124,61 @@
                         </ul>
                     </div>
                 </nav>
-                <div class="box col s12">
-                    <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
-                    <p class="white-text">Mauris sdsdsdsd dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+                <div class="box col s12 darkgrey">
+                        <div class="search-container">
+                                <form action="/action_page.php">
+                                  <input type="text" placeholder="Search.." name="search">
+                                  <button type="submit" class="submitbtn"><i class="fa fa-search "></i></button>
+                                </form>
+                        </div>
+                <h1 class="title">Manis</h1>
+<!-- GRID BOX
+EDITOR: MARIO
+KEKURANGAN: 1. MASIH BELOM ADA WARNA BACKGROUND 
+            2. FONT NUTELLA MASIH BELOM SESUAI
+            3. FOTO MARTABAK BELUM DIGANTI IMG-->
+                    <div class="gridbox">
+                        <div class="boxes">
+                            <p class="pink">Nutella</p>
+                            <p>Foto martabak mahal</p>
+                            <p class="violet">Rp65.000</p>
+                        </div>
+                        <div class="boxes">
+                            <p class="pink">Nutella</p>
+                            <p>Foto martabak mahal</p>
+                            <p class="violet">Rp65.000</p>
+                        </div>
+                        <div class="boxes">
+                            <p class="pink">Nutella</p>
+                            <p>Foto martabak mahal</p>
+                            <p class="violet">Rp65.000</p>
+                        </div>
+                        <div class="boxes">
+                            <p class="pink">Nutella</p>
+                            <p>Foto martabak mahal</p>
+                            <p class="violet">Rp65.000</p>
+                        </div>
+                        <div class="boxes">
+                            <p class="pink">Nutella</p>
+                            <p>Foto martabak mahal</p>
+                            <p class="violet">Rp65.000</p>
+                        </div>
+                        <div class="boxes">
+                            <p class="pink">Nutella</p>
+                            <p>Foto martabak mahal</p>
+                            <p class="violet">Rp65.000</p>
+                        </div>
+                        <div class="boxes">
+                            <p class="pink">Nutella</p>
+                            <p>Foto martabak mahal</p>
+                            <p class="violet">Rp65.000</p>
+                        </div>
+                        <div class="boxes">
+                            <p class="pink">Nutella</p>
+                            <p>Foto martabak mahal</p>
+                            <p class="violet">Rp65.000</p>
+                        </div>
+                    </div>
                 </div>
         </div>
     </div>
