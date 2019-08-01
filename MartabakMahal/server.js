@@ -9,4 +9,8 @@ app.get('/', function (req, res) {
     res.send('Hello World!');
 });
 
+app.post('/hehe', function (req, res) {
+    res.send(req.params);
+});
+
 app.listen(port, () => console.log(`Aplikasi Martabak Mahal listening on port ${port}!`));
