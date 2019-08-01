@@ -1,1 +1,1 @@
-web: node ./MartabakMahal/server.js
+web: node server.js
