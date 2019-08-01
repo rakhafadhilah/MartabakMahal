@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Login Page</title>
 
   <!-- Materialize CDN -->
   <!-- Compiled and minified CSS -->
@@ -13,15 +13,32 @@
   <!-- Materialize Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- End of Materialize CDN -->
+
+  <style>
+    body {
+      background: #212121;
+    }
+
+    html, body, .container {
+      height: 100%;
+      width: 100%;
+    }
+    
+    .col {
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container valign-wrapper">
     <div class="row">
-      <div class="col m6 offset-m3">
-        <!-- <div class="row"> -->
-        <form action="" class="col s12">
+      <div class="col">
+        <p class="center-align">
+          <img style="max-width: 70%; height: auto" class="responsive-img" src="Image/Logo.png" alt="">
+        </p>
+        <form action="" class="col" method="">
           <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col">
               <i class="material-icons prefix">email</i>
               <input type="text" class="validate" id="username">
               <label for="username">Username</label>
@@ -29,7 +46,7 @@
           </div>
 
           <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col">
               <i class="material-icons prefix">vpn_key</i>
               <input type="password" id="password" class="validate">
               <label for="password">Password</label>
@@ -38,11 +55,10 @@
 
           <div class="row">
             <p class="center-align">
-              <button class="btn grey darken-4 waves-effect waves-light" type="button">Login</button>
+              <button class="btn grey darken-4 waves-effect waves-light" type="submit">Login</button>
             </p>
           </div>
         </form>
-        <!-- </div> -->
       </div>
     </div>
   </div>
