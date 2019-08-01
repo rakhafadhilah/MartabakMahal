@@ -69,15 +69,11 @@ typings/
 *.sln.docstates
 
 # Build results
-[Dd]ebug/
 [Dd]ebugPublic/
-[Rr]elease/
 [Rr]eleases/
 x64/
 x86/
 bld/
-[Bb]in/
-[Oo]bj/
 build/
 
 # Roslyn cache directories
@@ -312,3 +308,5 @@ AkavacheSqliteLinkerOverride.cs
 NuGetBuild
 WiX.Toolset.DummyFile.txt
 GitHubVS.sln.DotSettings
+slnx.sqlite
+.suo
