@@ -5,8 +5,8 @@ const app = express();
 const port = 3000;
 
 app.use(express.static('public'));
-app.use(express.urlencoded());
-app.use(express.json());
+app.use(express.urlencoded()); //parse url-encoded body
+app.use(express.json()); //parse .json body (hati2 lupa ini)
 
 app.get('/', function (req, res) {
     res.send('Hello World!');
