@@ -34,6 +34,7 @@
         .box{
             background-color:grey;
             height: 100%;
+            margin: 10px;
         }
         .btn{
             height:15%;
@@ -41,8 +42,11 @@
         .lilspace{
             margin: 10px 0 10px 0;
         }
-
-    
+        .searchBar{
+            margin: 0 0 0 40px;
+            padding: 0 0 0 40px;
+        }
+        
     </style>
 </head>
 <body>
@@ -58,16 +62,16 @@
                 </li>
             </ul>
             <div id="recommended" class="col s12">
-                <a class="btn col s12 lilspace"><span class="left">Manis</span><span class="right">S</span><br><span class="left">Nutella</span><span class="right">Rp131.000,-</span></a>
-                <a class="btn col s12 lilspace"><span class="left">Manis</span><span class="right">M</span><br><span class="left">Skippy Chunky</span><span class="right">Rp60.000,-</span></a>
-                <a class="btn col s12 lilspace"><span class="left">Manis</span><span class="right">L</span><br><span class="left">Tobleron</span><span class="right">Rp. 154.000</span></a>
-                <a class="btn col s12 lilspace"><span class="left">Klasik</span><span class="right">M</span><br><span class="left">Coklat Kacang Keju</span><span class="right">Rp. 180.000</span></a>
-                <a class="btn col s12 lilspace"><span class="left">Asin</span><span class="right">T</span><br><span class="left">Martabat Saya</span><span class="right">Rp. 200.000</span></a>
+                <a class="grey btn col s12 lilspace"><span class="left">Manis</span><span class="right">S</span><br><span class="left">Nutella</span><span class="right">Rp131.000,-</span></a>
+                <a class="grey btn col s12 lilspace"><span class="left">Manis</span><span class="right">M</span><br><span class="left">Skippy Chunky</span><span class="right">Rp60.000,-</span></a>
+                <a class="grey btn col s12 lilspace"><span class="left">Manis</span><span class="right">L</span><br><span class="left">Tobleron</span><span class="right">Rp. 154.000</span></a>
+                <a class="grey btn col s12 lilspace"><span class="left">Klasik</span><span class="right">M</span><br><span class="left">Coklat Kacang Keju</span><span class="right">Rp. 180.000</span></a>
+                <a class="grey btn col s12 lilspace"><span class="left">Asin</span><span class="right">T</span><br><span class="left">Martabat Saya</span><span class="right">Rp. 200.000</span></a>
             </div>
             <div id="recent" class="col s12">
-                <p class="flow-text white-text">Recent</p>
-                <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
-                <p class="white-text">Mauris sdsdsdsd dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+                <a class="grey btn col s12 lilspace"><span class="left">Manis</span><span class="right">L</span><br><span class="left">Tobleron</span><span class="right">Rp. 154.000</span></a>
+                <a class="grey btn col s12 lilspace"><span class="left">Klasik</span><span class="right">M</span><br><span class="left">Coklat Kacang Keju</span><span class="right">Rp. 180.000</span></a>
+                <a class="grey btn col s12 lilspace"><span class="left">Asin</span><span class="right">T</span><br><span class="left">Martabat Saya</span><span class="right">Rp. 200.000</span></a>
             </div>
         </div>
         <!-- navbar -->
@@ -82,6 +86,12 @@
                         </ul>
                     </div>
                 </nav>
+                <div class="input-field">
+                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                <input id="search" type="search" required>
+                                <i class="material-icons">close</i>
+                </div>
+
                 <div class="box col s12">
                     <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
                     <p class="white-text">Mauris sdsdsdsd dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
