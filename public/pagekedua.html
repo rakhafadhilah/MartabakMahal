@@ -37,6 +37,9 @@
             height: 150%;
             margin: 10px;
         }
+        .midpart{
+            background-color: #555;
+        }
         .btn{
             height:15%;
         }
@@ -76,7 +79,7 @@
             height: 200px;
             background-color: white;
             display: grid; 
-            grid-template-rows: 2fr 9fr 2fr;
+            grid-template-rows: 9fr 2fr;
             justify-items: center;
         }
         .title{
@@ -85,13 +88,22 @@
             font-weight: 700;
         }
         .gridbox{
-            margin:25%;
+            margin-top: 200px;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
         }
         image{
             size:10%
+        }
+        .img{
+            border: 5px solid black;
+            padding: 20px 10px 20px 10px;
+            border-radius: 10%;
+            background-color:white;
+        }
+        .s3{
+            text-align:center;
         }
     </style>
 </head>
@@ -138,7 +150,7 @@
                         <i class="material-icons">close</i>
                 </div>
 
-                <div class="box col s12">
+                <div class="box col s12 midpart">
                     <!-- GRID BOX
                     EDITOR: MARIO
                     KEKURANGAN: 1. MASIH BELOM ADA WARNA BACKGROUND 
@@ -146,16 +158,16 @@
                                 3. FOTO MARTABAK BELUM DIGANTI IMG-->
                     <div class="gridbox col s12">
                         <div class="col s3">
-                            <img src="Image/Logo.png" alt="" class="responsive-img">     
-                            <p class="violet">Asin</p>
+                            <img src="Image/salt.png" alt="" class="img responsive-img">     
+                            <p>Asin</p>
                         </div>
                         <div class="col s3">
-                            <img src="Image/Logo.png" alt="" class="responsive-img">     
-                            <p class="violet">Manis</p>
+                            <img src="Image/sugar.png" alt="" class="img responsive-img">     
+                            <p>Manis</p>
                         </div>
                         <div class="col s3">
-                            <img src="Image/Logo.png" alt="" class="responsive-img">     
-                            <p class="violet">Klasik</p>
+                            <img src="Image/smiling-emoticon-square-face.png" alt="" class="img responsive-img">     
+                            <p>Klasik</p>
                         </div>
                     </div>
                 </div>
