@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -109,9 +110,49 @@
             font-weight: 700;
             color: white;
         }
+		#clock { font-family: Arial, Helvetica, sans-serif; font-size: 1em; color: white;}
     </style>
+	<script type="text/javascript">
+		<!--
+
+		function init ( )
+		{
+		  timeDisplay = document.createTextNode ( "" );
+		  document.getElementById("clock").appendChild ( timeDisplay );
+		}
+
+		function updateClock ( )
+		{
+		  var currentTime = new Date ( );
+
+		  var currentHours = currentTime.getHours ( );
+		  var currentMinutes = currentTime.getMinutes ( );
+		  var currentSeconds = currentTime.getSeconds ( );
+
+		  // Pad the minutes and seconds with leading zeros, if required
+		  currentMinutes = ( currentMinutes < 10 ? "0" : "" ) + currentMinutes;
+		  currentSeconds = ( currentSeconds < 10 ? "0" : "" ) + currentSeconds;
+
+		  // Choose either "AM" or "PM" as appropriate
+		  var timeOfDay = ( currentHours < 12 ) ? "AM" : "PM";
+
+		  // Convert the hours component to 12-hour format if needed
+		  currentHours = ( currentHours > 12 ) ? currentHours - 12 : currentHours;
+
+		  // Convert an hours component of "0" to "12"
+		  currentHours = ( currentHours == 0 ) ? 12 : currentHours;
+
+		  // Compose the string for display
+		  var currentTimeString = currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay;
+
+		  // Update the time display
+		  document.getElementById("clock").firstChild.nodeValue = currentTimeString;
+		}
+
+		// -->
+	</script>
 </head>
-<body>
+<body onload="updateClock(); setInterval('updateClock()', 1000)">
     <div class="row">
         <!-- Tabs -->
         <div class="col s3">
@@ -143,7 +184,7 @@
                         <ul class="white-text">
                             <li class="left">Terjual :</li>
                             <li><a href="">42</a></li>
-                            <li><a href="" class="mid-element hide-on-med-and-down">4 : 20</a> </li>
+                            <li><a id="clock" class="mid-element hide-on-med-and-down">&nbsp;</a></li>
                             <li class="right hide-on-med-and-down"><a href="">Kamis, 12 Juli 2019</a></li>
                         </ul>
                     </div>
@@ -190,6 +231,8 @@
     $(document).ready(function(){
         $('.tabs').tabs();
     })
+	
+
 </script>
 </body>
 </html>
