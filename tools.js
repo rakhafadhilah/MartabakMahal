@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 
 const secret = 'RAHASIA';
 var options = {
-    timeout: '5m' // waktu sebelum terpaksa logout
+    timeout: '15s' // waktu sebelum terpaksa logout
 };
 
 exports.check_cookie = function (token) {

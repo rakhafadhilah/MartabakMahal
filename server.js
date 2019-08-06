@@ -5,6 +5,7 @@ const express = require('express');
 //const ejs = require('ejs');
 const mainRoute = require('./routes/main');
 const tools = require('./tools');
+const database = require('./database');
 const app = express();
 
 app.use(cookieParser());
@@ -21,15 +22,17 @@ const port = 3000;
 // post handling
 
 app.post('/post_login', function (req, res) {
+    var result = database.check_password(req.body.username, req.body.password);
 
-    // tambahin pengecekan username & password disini
-
-    // kalo semuanya valid, perbarui cookie login:
-    var payload = {
-        username: req.body.username
-    };
-    res.cookie('data', tools.sign_cookie(payload));
-    res.redirect('../');
+    if (result) {
+        var payload = {
+            username: req.body.username
+        };
+        res.cookie('data', tools.sign_cookie(payload));
+        res.redirect('../');
+    } else {
+        res.redirect(`../login`);
+    }
 });
 
 // listen

@@ -1,0 +1,16 @@
+{
+    "foods": [
+        {
+            "id": 0,
+            "name": "Martabak Manis",
+            "price": "100000",
+            "mengandung_susu": false
+        },
+        {
+            "id": 1,
+            "name": "Martabak Pedas",
+            "price": "120423",
+            "mengandung_susu": true
+        }
+    ]
+}
