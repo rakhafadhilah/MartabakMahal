@@ -50,6 +50,10 @@ module.exports = {
         }
         this.set_foods(foods);
     },
+	get_food_by_type: function (type) {
+		var foods = this.get_foods();
+		return foods.find(food => food.type === type);
+	},
 
     // user
     get_users: function () {
