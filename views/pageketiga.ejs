@@ -91,7 +91,6 @@
                     <input type="text" placeholder="Search..">
                 </div>
                 <div class="row">
-                    <p></p>
                     <% for (var i = 0; i < foods.length; i++) {%>
                     <div class="col s12 m5">
                         <a href="" class="btn" onclick="back"></a>
@@ -136,12 +135,7 @@
     $(document).ready(function(){
         $('.tabs').tabs();
     })
-    
-    function back(e){
-        e.preventDefault();
-        window.location.href="http://localhost:3000/login";
-        console.log(window.location);
-    }
+
 </script>
 </body>
 </html>
