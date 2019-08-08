@@ -15,7 +15,8 @@ router.get('/pagepertama', function (req, res) {
 });
 
 router.get('/pagekedua', function (req, res) {
-    res.render('pagekedua', {foods: database.get_foods()});
+	var terjual = database.terjual();
+    res.render('pagekedua', {foods: database.get_foods(),terjual: terjual});
 });
 
 router.get('/pageketiga', function (req, res) {
@@ -23,7 +24,8 @@ router.get('/pageketiga', function (req, res) {
     var type = req.query.type || -1;
     var search = req.query.search || "";
 	foodArray = database.get_food_by_search(database.get_food_by_type(type),search);
-    res.render('pageketiga', {foods: foodArray, type: type});
+	var terjual = database.terjual();
+    res.render('pageketiga', {foods: foodArray, type: type, terjual: terjual});
 });
 
 router.get('/test', function (req, res) {

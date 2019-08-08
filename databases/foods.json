@@ -14,7 +14,15 @@
 			"type": "0",
             "price": ["120423","12324","2334343","2324354"],
             "mengandung_susu": true,
-			"terjual": 12
-        }
+			"terjual": 13
+        },
+		{
+			"id" : 2,
+			"name": "Martabak Telor",
+			"type": "0",
+			"price": ["123","456","999999", "341"],
+			"mengandung_susu": false,
+			"terjual": 30
+		}
     ]
 }

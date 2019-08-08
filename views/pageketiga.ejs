@@ -83,8 +83,9 @@
                 <div>
                     <ul class="white-text">
                         <li class="left">Terjual :</li>
-                        <li><a href="">42</a></li>
+                        <li><a href=""><%= terjual %></a></li>
                         <li><a id="clock" class="mid-element hide-on-med-and-down">&nbsp;</a></li>
+						<li class="right hide-on-med-and-down"><a id="date" href="">&nbsp;</a></li>
                     </ul>
                 </div>
             </nav>
@@ -92,8 +93,7 @@
 
                     <input class="white-text" type="text" id="myText" placeholder="Search..">
                     <button onclick="myFunction(<%= type %>)">Search</button>
-                    <div class="box col s12 midpart testss">
-                <div class="row">
+                <div id="card-container" class="row">
                     <% for (var i = 0; i < foods.length; i++) {%>
                     <div class="col s12 m5">
                         
@@ -105,47 +105,51 @@
                                 <p><%= foods[i].name %></p>
                             </div>
                             <div class="card-action">
-                                <p><%= foods[i].price[2] %></p>
+                                <p><%= foods[i].price[2]%></p>
                             </div>
                         </div>  
                     </div>
                     <% } %>
-                </div>           
-            </div>  
+                </div>   
 
         </div>
-        <div class="col s2">
-            <nav class="nav-wrapper transparent nav-edit">
-                <div>
-                    <ul class="white-text">
-                        <li class="right hide-on-med-and-down"><a id="date" href="">&nbsp;</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <h3 class="white-text">Varian</h3>
-
-            <button class="waves-effect waves-light btn col s12 lilspace" onclick=''>Tipis</button>
-            <a class="waves-effect waves-light btn col s12 lilspace" onclick=''>Medium</a>
-            <a class="waves-effect waves-light btn col s12 lilspace">Large</a>
-            <a class="waves-effect waves-light btn col s12 lilspace">Spesial</a>
-        </div>
+    </div>
+	
+    <div class="col s2">
+        <h3 class="white-text" style="padding-left: 10px">Varian</h3>
+        <button class="waves-effect waves-light btn col s12 lilspace active" onclick=''>Tipis</a>
+        <button class="waves-effect waves-light btn col s12 lilspace" onclick=''>Medium</a>
+        <button class="waves-effect waves-light btn col s12 lilspace" onclick=''>Large</a>
+        <button class="waves-effect waves-light btn col s12 lilspace" onclick=''>Spesial</a>
     </div>
     
 <!-- Compiled and minified JavaScript -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 <script>
-    $(document).ready(function(){
+    $(document).ready(function() {
         $('.tabs').tabs();
+	  
+		var btns = document.getElementsByClassName("btn");
+		for (var i = 0; i < btns.length; i++) {
+			btns[i].addEventListener("click", function() {
+			var current = document.getElementsByClassName("active");
+			if (current.length > 0) { 
+				current[0].className = current[0].className.replace(" active", "");
+			}
+			this.className += " active";
+			});
+		}
+		
     })
-  
-function myFunction(type) {
-  var x = document.getElementById("myText").value;
-  console.log(window.location.href);
-  
-  var queries = "&search="+String(x);
-  window.location.href = "pageketiga?type=" + type + queries; 
-}
+	
+	function myFunction(type) {
+		var x = document.getElementById("myText").value;
+		console.log(window.location.href);
+		
+		var queries = "&search="+String(x);
+		window.location.href = "pageketiga?type=" + type + queries; 
+	}
 
 </script>
 </body>

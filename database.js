@@ -57,6 +57,15 @@ module.exports = {
 	get_food_by_search: function(foods, search) {
 		return foods.filter(food => food.name.toUpperCase().indexOf(search.toUpperCase()) > -1);
 	},
+	
+	terjual: function() {
+		var terjual = 0;
+		var foods = this.get_foods();
+		for (i in foods) {
+			terjual += foods[i].terjual;
+		}
+		return terjual;
+	},
 
     // user
     get_users: function () {
@@ -85,7 +94,7 @@ module.exports = {
         }
         this.set_users(users);
     },
-
+	
     // password
     check_password: function (name, password) {
         var user = this.get_user(name);
