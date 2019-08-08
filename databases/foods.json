@@ -1,16 +1,21 @@
 {
+    "tmp": 0,
     "foods": [
         {
             "id": 0,
             "name": "Martabak Manis",
-            "price": "100000",
-            "mengandung_susu": false
+			"type": 0,
+            "price": ["100000","20000","30000","40000"],
+            "mengandung_susu": false,
+			"terjual": 13
         },
         {
             "id": 1,
             "name": "Martabak Pedas",
-            "price": "120423",
-            "mengandung_susu": true
+			"type": 1,
+            "price": ["120423","12324","2334343","2324354"],
+            "mengandung_susu": true,
+			"terjual": 12
         }
     ]
 }

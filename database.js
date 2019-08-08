@@ -7,16 +7,16 @@ const users_path = './databases/users.json';
 module.exports = {
 
     // template
-    food_template: function () {
-        return 
-    },
-    user_template: function () {
-        return {
-            name: 'Keju',
-            salt: 'garam',
-            password: '1234'
-        }
-    },
+    // food_template: function () {
+    //     return 
+    // },
+    // user_template: function () {
+    //     return {
+    //         name: 'Keju',
+    //         salt: 'garam',
+    //         password: '1234'
+    //     }
+    // },
 
     // makanan
     get_foods: function () {
@@ -50,6 +50,10 @@ module.exports = {
         }
         this.set_foods(foods);
     },
+	get_food_by_type: function (type) {
+		var foods = this.get_foods();
+		return foods.find(food => food.type === type);
+	},
 
     // user
     get_users: function () {

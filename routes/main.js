@@ -15,11 +15,11 @@ router.get('/pagepertama', function (req, res) {
 });
 
 router.get('/pagekedua', function (req, res) {
-    res.render('pagekedua', {});
+    res.render('pagekedua', {foods: database.get_foods()});
 });
 
 router.get('/pageketiga', function (req, res) {
-    res.render('pageketiga', {});
+    res.render('pageketiga', {foods: database.get_foods()});
 });
 
 router.get('/test', function (req, res) {
