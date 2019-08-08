@@ -21,8 +21,9 @@ router.get('/pagekedua', function (req, res) {
 router.get('/pageketiga', function (req, res) {
     var foodArray = [];
     var type = req.query.type || -1;
-    var name = req.query.name || 'hahahihi';
-    res.render('pageketiga', {foods: database.get_food_by_type(type), type: type});
+    var search = req.query.search || "";
+	foodArray = database.get_food_by_search(database.get_food_by_type(type),search);
+    res.render('pageketiga', {foods: foodArray, type: type});
 });
 
 router.get('/test', function (req, res) {

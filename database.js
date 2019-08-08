@@ -54,6 +54,9 @@ module.exports = {
 		var foods = this.get_foods();
 		return foods.filter(food => food.type === type);
 	},
+	get_food_by_search: function(foods, search) {
+		return foods.filter(food => food.name.toUpperCase().indexOf(search.toUpperCase()) > -1);
+	},
 
     // user
     get_users: function () {
