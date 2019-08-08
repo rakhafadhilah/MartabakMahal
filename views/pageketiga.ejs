@@ -86,14 +86,16 @@
                     </ul>
                 </div>
             </nav>
-            <a href="" class="box col s12">
-                <div class="topnav">
-                    <input type="text" placeholder="Search..">
-                </div>
+            <div class="box col s12">
+
+                    <input class="white-text" type="text" id="myText" placeholder="Search..">
+    
+                    <button onclick="myFunction()">lala</button>
+                    <div class="box col s12 midpart testss">
                 <div class="row">
                     <% for (var i = 0; i < foods.length; i++) {%>
                     <div class="col s12 m5">
-                        <a href="" class="btn" onclick="back"></a>
+                        
                         <div class="card">
                             <div class="card-image">
                                 <!-- <img src="images/download.jpeg"> -->
@@ -108,7 +110,7 @@
                     </div>
                     <% } %>
                 </div>           
-            </a>  
+            </div>  
 
         </div>
         <div class="col s2">
@@ -135,6 +137,13 @@
     $(document).ready(function(){
         $('.tabs').tabs();
     })
+    
+function myFunction() {
+  var x = document.getElementById("myText").value;
+  console.log(window.location.href);
+  var queries = "?name="+String(x);
+  window.location.href = "pageketiga"+queries; 
+}
 
 </script>
 </body>
