@@ -52,7 +52,9 @@ module.exports = {
     },
 	get_food_by_type: function (type) {
 		var foods = this.get_foods();
-		return foods.find(food => food.type === type);
+        var test = foods.filter(food => food.type === type);
+        console.log(test);
+        return test;
 	},
 
     // user
