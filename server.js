@@ -1,32 +1,40 @@
 'use strict';
-const express = require('express');
-const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+//const bodyParser = require('body-parser');
+const express = require('express');
+//const ejs = require('ejs');
+const mainRoute = require('./routes/main');
+const tools = require('./tools');
+const database = require('./database');
 const app = express();
-const port = 80;
 
-app.use(express.static('public'));
 app.use(cookieParser());
-app.use(express.urlencoded({ extended: true })); //parse url-encoded body
-app.use(express.json()); //parse .json body (hati2 lupa ini)
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static('public'));
+app.use(express.json());
+app.use('/', mainRoute);
+app.set('view engine', 'ejs');
 
-// halaman utama
-app.get('/', function (req, res) {
-    if (req.cookies.isLoggedIn === 'yes') {
-        res.redirect('/pagekedua.html');
-    } else {
-        res.redirect('/login.html');
-    }
-});
+// options
 
-// penerima request post untuk login
+const port = 3000;
+
+// post handling
+
 app.post('/post_login', function (req, res) {
-    if (req.body.username === 'bob' && req.body.password === 'bob') {
-        res.cookie('isLoggedIn', 'yes');
+    var result = database.check_password(req.body.username, req.body.password);
+
+    if (result) {
+        var payload = {
+            username: req.body.username
+        };
+        res.cookie('data', tools.sign_cookie(payload));
+        res.redirect('../');
     } else {
-        res.cookie('isLoggedIn', 'no');
+        res.redirect(`../login`);
     }
-    res.redirect('../');
 });
+
+// listen
 
 app.listen(port, () => console.log(`Aplikasi POS 'Martabak Mahal' telah dijalankan pada port ${port}!`));

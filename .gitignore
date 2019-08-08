@@ -69,10 +69,14 @@ typings/
 *.sln.docstates
 
 # Build results
+[Dd]ebug/
 [Dd]ebugPublic/
+[Rr]elease/
 [Rr]eleases/
 x64/
 x86/
+[Oo]bj/
+[Bb]in/
 bld/
 build/
 
