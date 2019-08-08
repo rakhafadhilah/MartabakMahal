@@ -7,7 +7,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-    <title>Page Ketiga</title>
+    <link rel="stylesheet" href="css/widget-style.css">
+	<script src="script/widget.js"></script>
+	<title>Page Ketiga</title>
     <style>
         *{
             margin: 0;
@@ -61,7 +63,7 @@
         }
     </script>
 </head>
-<body>
+<body onload="updateClock(); updateDate(); setInterval(['updateClock()','updateDate()'], 1000)")>
     <div class="row">
         <!-- Tabs -->
         <div class="col s2 greydark" >
@@ -82,15 +84,14 @@
                     <ul class="white-text">
                         <li class="left">Terjual :</li>
                         <li><a href="">42</a></li>
-                        <li><a href="" class="mid-element hide-on-med-and-down">4 : 20</a> </li>
+                        <li><a id="clock" class="mid-element hide-on-med-and-down">&nbsp;</a></li>
                     </ul>
                 </div>
             </nav>
             <div class="box col s12">
 
                     <input class="white-text" type="text" id="myText" placeholder="Search..">
-    
-                    <button onclick="myFunction()">lala</button>
+                    <button onclick="myFunction(<%= type %>)">Search</button>
                     <div class="box col s12 midpart testss">
                 <div class="row">
                     <% for (var i = 0; i < foods.length; i++) {%>
@@ -117,7 +118,7 @@
             <nav class="nav-wrapper transparent nav-edit">
                 <div>
                     <ul class="white-text">
-                        <li class="right hide-on-med-and-down"><a href="">Kamis, 12 Juli 2019</a></li>
+                        <li class="right hide-on-med-and-down"><a id="date" href="">&nbsp;</a></li>
                     </ul>
                 </div>
             </nav>
@@ -137,12 +138,13 @@
     $(document).ready(function(){
         $('.tabs').tabs();
     })
-    
-function myFunction() {
+  
+function myFunction(type) {
   var x = document.getElementById("myText").value;
   console.log(window.location.href);
-  var queries = "?name="+String(x);
-  window.location.href = "pageketiga"+queries; 
+  
+  var queries = "&search="+String(x);
+  window.location.href = "pageketiga?type=" + type + queries; 
 }
 
 </script>

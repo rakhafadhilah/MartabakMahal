@@ -22,7 +22,7 @@ router.get('/pageketiga', function (req, res) {
     var foodArray = [];
     var type = req.query.type || -1;
     var name = req.query.name || 'hahahihi';
-    res.render('pageketiga', {foods: database.get_food_by_type(type)});
+    res.render('pageketiga', {foods: database.get_food_by_type(type), type: type});
 });
 
 router.get('/test', function (req, res) {
