@@ -4,6 +4,11 @@
             "name": "RizkyIF",
             "salt": "db19b19696fdcd12107c501183e90c15",
             "password": "64b611dd59dc10c13f8cff43eef3bdb910481eee5750fd170de11fac032523ac1565dc416bad7dad73fd49cf401d774e414dd13c39a652aa425f2892e3fc9dbb"
+        },
+        {
+            "name": "admin",
+            "salt": "df1b5c65eed2c9d3971d188d2eeb5ef2",
+            "password": "1db33ebff406d0f371e55fc8773b018ff757594dd090a2cb8cf0c42a998f7e1d067940be07dd656882c0c640d986c52f113c0c7d756e98df41878f0b4a163e59"
         }
     ]
 }

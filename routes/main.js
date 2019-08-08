@@ -19,7 +19,7 @@ router.get('/pagekedua', function (req, res) {
 });
 
 router.get('/pageketiga', function (req, res) {
-    res.render('pageketiga', {});
+    res.render('pageketiga', {foods: database.get_foods()});
 });
 
 router.get('/test', function (req, res) {

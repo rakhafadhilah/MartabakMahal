@@ -7,16 +7,16 @@ const users_path = './databases/users.json';
 module.exports = {
 
     // template
-    food_template: function () {
-        return 
-    },
-    user_template: function () {
-        return {
-            name: 'Keju',
-            salt: 'garam',
-            password: '1234'
-        }
-    },
+    // food_template: function () {
+    //     return 
+    // },
+    // user_template: function () {
+    //     return {
+    //         name: 'Keju',
+    //         salt: 'garam',
+    //         password: '1234'
+    //     }
+    // },
 
     // makanan
     get_foods: function () {
