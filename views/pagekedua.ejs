@@ -112,6 +112,7 @@
             font-weight: 700;
             color: white;
         }
+
     </style>
 </head>
 <body onload="updateClock(); updateDate(); setInterval(['updateClock()','updateDate()'], 1000)">
@@ -151,13 +152,7 @@
                         </ul>
                     </div>
                 </nav>
-                <div class="input-field">
-                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                        <input id="search" type="search" required>
-                        <i class="material-icons">close</i>
-                </div>
 
-                <div class="box col s12 midpart testss">
                     <!-- GRID BOX
                     EDITOR: MARIO
                     KEKURANGAN: 1. MASIH BELOM ADA WARNA BACKGROUND 
@@ -206,6 +201,11 @@
         var queries = "?type="+String(kodequery);
         window.location.href = "pageketiga"+queries; 
     }
+
+    function myFunction() {
+  var x = document.getElementById("myText").value;
+  document.getElementById("demo").innerHTML = x;
+}
 </script>
 </body>
 </html>
