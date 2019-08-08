@@ -3,7 +3,7 @@
         {
             "id": 0,
             "name": "Martabak Manis",
-			"type": 0,
+			"type": "0",
             "price": ["100000","20000","30000","40000"],
             "mengandung_susu": false,
 			"terjual": 13
@@ -11,7 +11,7 @@
         {
             "id": 1,
             "name": "Martabak Pedas",
-			"type": 1,
+			"type": "1",
             "price": ["120423","12324","2334343","2324354"],
             "mengandung_susu": true,
 			"terjual": 12
