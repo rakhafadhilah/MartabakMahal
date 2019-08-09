@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/widget-style.css">
     <script src="script/widget.js"></script>
     <script src="script/cart.js"></script>
@@ -81,27 +82,23 @@
             grid-template-columns: 95% 5%;
         }
     </style>
-
 </head>
 <body onload="updateClock(); updateDate(); setInterval(['updateClock()','updateDate()'], 1000)")>
     <div class="row">
         <!-- Checkout -->
-        <div class="col s2 white-text" >
-            <a class="btn redhover black-text white-border" href="/pagekedua"">
-                <i class="material-icons">arrow_back</i>
-            </a>
-            <div id="checkout" class="col s10">
-                <p class="flow-text white-text middle">Checkout</p>
+        <div class="col s2 greydark" style="min-height:100%">
+            <!-- <div id="checkout" class="col s12"> -->
+            <p class="flow-text white-text middle">Checkout</p>
+            <!-- </div> -->
+            <div class="cart-items" style="height:80%; background-color: #424242; overflow:scroll; margin-bottom: 10px;">
             </div>
-            <section class="container content-section">
-                <div class="cart-items">
-                </div>
-                <div class="cart-total">
-                    <strong class="cart-total-title">Total</strong>
-                    <span class="cart-total-price">IDR 0</span>
-                </div>
-                <a class="redhover btn white-border" type="button">CONFIRM</a>
-            </section>
+
+            <div class="center-align">
+                <button class="cart-total btn btn-primary btn-purchase" type="button" style="min-height:10%;">
+                    <p class="cart-total-price center-align">IDR 0</p>
+                    <p>CONFIRM</p>
+                </button>
+            </div>
         </div>
 
         <!-- navbar -->
