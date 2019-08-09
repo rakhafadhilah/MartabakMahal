@@ -12,18 +12,14 @@ Feel free to git pull m8 UwU
 
 ### Prerequisites
 
-
-
-```
-Give examples
-```
+* Git - Download and install git especially if you are using Windows
+* Nodejs - Download and install nodejs and npm 
 
 ### Installing
 
 Before pulling or running the project, it is necessary to install the following:
 * nodejs: https://nodejs.org/en/download/
 * node package manager: https://www.npmjs.com/package/download/
-
 
 Say what the step will be
 
@@ -41,7 +37,9 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Running the tests
 
-Tes
+Procedure on running the source code testing:
+* edit the possibly faulty code
+* test from either live server or using node server.js
 
 ### Break down into end to end tests
 
@@ -61,7 +59,7 @@ Give an example
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+We do not deploy this project online (using node.js to run local server). But if we are going to deploy the project, we will use heroku (https://www.heroku.com/) to build, run,and operate the project through the cloud.
 
 ## Built With
 
@@ -89,7 +87,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * **Mario Gunawan** - *Front End styler* - [margunwan](https://github.com/margunwan)
 * **Muhammad Fauzan Rafi Sidiq Widjonarto** - *Backend* - [mufraswid](https://github.com/mufraswid)
 * **Tifany Angelia** - *Front end* - [tifangel](http://github.com/tifangel)
-* **Rakha Fadhilah** - ** - [rakhafadhilah](http://github.com/rakhafadhilah)
+* **Rakha Fadhilah** - *Front end* - [rakhafadhilah](http://github.com/rakhafadhilah)
 * **Ryan Daniel** - ** - []()
 * **Muhammad Ravid Valiandi** - ** - []()
 * **Raihan Faturrahman** - ** - []()
