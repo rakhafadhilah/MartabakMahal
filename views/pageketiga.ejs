@@ -16,12 +16,11 @@
             margin: 0;
             padding: 0;
         }
+        :root{
+            font-size: 16px;
+        }
         body{
             background-color:black;
-        }
-        .mid-element{
-            text-align:center;
-            width:650px;
         }
         .nav-edit{
             height:47px;
@@ -29,28 +28,22 @@
         nav.nav-wrapper{
             line-height:45px;
         }
-        ul.tabs{
-            background-color:grey;
-        }
-        .tabs .tab a:focus, .tabs .tab a:focus.active{
-            background-color:black;
-        }
         .tabs .indicator{
             background-color:transparent;
         }
         .box{
-            background-color:grey;
-            height: 100%;
+            height: auto;
         }
         .btn{
-            height:12%;
+            text-transform: capitalize;
+        }
+        .btns{
+            border: 0;
+            height: 5%;
             text-transform: capitalize;
         }
         .lilspace{
             margin: 10px 0 10px 0;
-        }
-        .greydark{
-            background-color: #333333;
         }
         .middle{
             text-align: center;
@@ -66,6 +59,10 @@
         }
         .middle{
             margin: 0 auto 0 auto;
+            padding: auto 0 auto 0;
+        }
+        .searchbox{
+            background-color: white;
         }
         .lilspace{
             margin: 10px 0 10px 0;
@@ -73,14 +70,27 @@
         .white-border{
             border: 2px solid white;
         }
+        .flex-around{
+            display: flex;
+            flex-direction:row;
+            justify-content: space-around;
+        }
+        .searchbar{
+            margin-top: 15px;
+            display: grid;
+            grid-template-columns: 95% 5%;
+        }
     </style>
 
 </head>
 <body onload="updateClock(); updateDate(); setInterval(['updateClock()','updateDate()'], 1000)")>
     <div class="row">
         <!-- Checkout -->
-        <div class="col s2 greydark" >
-            <div id="checkout" class="col s12">
+        <div class="col s2 white-text" >
+            <a class="btn redhover black-text white-border" href="/pagekedua"">
+                <i class="material-icons">arrow_back</i>
+            </a>
+            <div id="checkout" class="col s10">
                 <p class="flow-text white-text middle">Checkout</p>
             </div>
             <section class="container content-section">
@@ -90,31 +100,29 @@
                     <strong class="cart-total-title">Total</strong>
                     <span class="cart-total-price">IDR 0</span>
                 </div>
-                <a class="redhover btn middle lilspace white-border" type="button">CONFIRM</a>
+                <a class="redhover btn white-border" type="button">CONFIRM</a>
             </section>
         </div>
 
         <!-- navbar -->
         <div class="col s8">
-            <nav class="nav-wrapper transparent nav-edit">
+            <nav class="nav-wrapper red black-text nav-edit nopadding">
                 <div>
-                    <ul class="white-text">
-                        <li class="left">Terjual :</li>
-                        <li><a href=""><%= terjual %></a></li>
-                        <li><a id="clock" class="mid-element hide-on-med-and-down">&nbsp;</a></li>
-						<li class="right hide-on-med-and-down"><a id="date" href="">&nbsp;</a></li>
+                    <ul class="white-text flex-around">
+                        <li class="">Terjual: <%= terjual %></li>
+                        <li><a id="clock" class="hide-on-med-and-down">&nbsp;</a></li>
+                        <li class="hide-on-med-and-down"><a id="date" href="">&nbsp;</a></li>
                     </ul>
                 </div>
-            </nav>
+        </nav>
 
             <div class="box col s12">
-                <input class="white-text" type="text" id="myText" placeholder="Search..">
-                <a class="btn" href="/pagekedua"">
-                    <i class="material-icons">arrow_back</i>
-                </a>
-                <button class="btn" onclick="myFunction(<%= type %>)">
-                    <i class="material-icons">search</i>
-                </button>
+                <div class="searchbar">
+                    <input class="white-text searchbox" type="text" id="myText" placeholder="Search..">
+                    <button class="btn redhover black-text white-border" onclick="myFunction(<%= type %>)">
+                        <i class="material-icons">search</i>
+                    </button>
+                </div>
                 <div id="card-container" class="row">
                     <% for (var i = 0; i < foods.length; i++) {%>
                     <div class="col s12 m3">
@@ -136,10 +144,10 @@
 	
     <div class="col s2">
         <h3 class="white-text" style="padding-left: 10px">Varian</h3>
-        <button class="waves-effect waves-light btn col s12 lilspace active" onclick='change_price(0, <%= type %>)'>Tipis</a>
-        <button class="waves-effect waves-light btn col s12 lilspace" onclick='change_price(1, <%= type %>)'>Medium</a>
-        <button class="waves-effect waves-light btn col s12 lilspace" onclick='change_price(2, <%= type %>)'>Large</a>
-        <button class="waves-effect waves-light btn col s12 lilspace" onclick='change_price(3, <%= type %>)'>Spesial</a>
+        <button class="black-text redhover waves-effect waves-light col btns s12 lilspace" onclick='change_price(0, <%= type %>)'>Tipis</a>
+        <button class="black-text redhover waves-effect waves-light col btns s12 lilspace" onclick='change_price(1, <%= type %>)'>Medium</a>
+        <button class="black-text redhover waves-effect waves-light col btns s12 lilspace" onclick='change_price(2, <%= type %>)'>Large</a>
+        <button class="black-text redhover waves-effect waves-light col btns s12 lilspace" onclick='change_price(3, <%= type %>)'>Spesial</a>
     </div>
     
 <!-- Compiled and minified JavaScript -->
