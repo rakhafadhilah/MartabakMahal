@@ -8,11 +8,11 @@ This project is a minimum viable product (MVP) of a POS project dedicated to sim
 
 > If I have seen further, it is by standing on the shoulders of StackOverflow
 >
-> **Sir Ojan**
+> **Sir Isaac Tangis Ojan**
 
 Repo: https://github.com/rzkyif/MartabakMahal
 
-Feel free to git pull m8 UwU, don't forget to buy the *cheap* martabak
+Feel free to git pull, don't forget to buy the *cheap* martabak
 
 ~php08
 
@@ -20,6 +20,7 @@ Feel free to git pull m8 UwU, don't forget to buy the *cheap* martabak
 
 * Git - Download and install git especially if you are using Windows
 * Nodejs - Download and install nodejs and npm 
+* Internet Browser (to run the local server)
 
 ### Installing
 
@@ -48,28 +49,14 @@ C:\Users\dir> node server
 ```
 
 Standard procedure on running the source code testing:
-* edit the possibly faulty code
-* test from either live server or using node server.js
+1. edit the possibly faulty code
+2. test from either live server or using node server.js to evaluate
+3. if necessary, repeat steps one and two
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
-We do not deploy this project online (using node.js to run local server). But if we are going to deploy the project, we will use [heroku] (https://www.heroku.com/) to build, run, and operate the project through the cloud.
+We do not deploy this project online (using node.js to run local server). But if we are going to deploy the project, we will use [heroku](https://www.heroku.com/) to build, run, and operate the project through the cloud.
 
 ## Built With
 
@@ -99,12 +86,12 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * **Tifany Angelia** - *Front end* - [tifangel](http://github.com/tifangel)
 * **Rakha Fadhilah** - *Front end* - [rakhafadhilah](http://github.com/rakhafadhilah)
 * **Ryan Daniel** - *Front end* - [ryndnlp](http://github.com/ryndnlp)
-* **Muhammad Ravid Valiandi** - *Front end* - []()
+* **Muhammad Ravid Valiandi** - *Front end*
 * **Raihan Faturrahman** - *Front end*
 * **Daniel Neolando Hutabalian** - *Front end* - [danielhutabalian](https://github.com/danielhutabalian)
 * **Izharulhaq** - *Insights* - [izharulhaq78](https://github.com/izharulhaq78)
-* **Byan Sakura Kireyna Aji** - ** - []()
-* **Arya Beri Argya Rasidi** - ** - []()
+* **Byan Sakura Kireyna Aji** - *Insights* 
+* **Arya Beri Argya Rasidi**
 
 For simplicity, this is the list of [contributors](https://github.com/rzkyif/MartabakMahal/contributors) who participated in this project.
 
