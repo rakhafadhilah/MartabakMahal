@@ -8,7 +8,8 @@
       <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
     <link rel="stylesheet" href="css/widget-style.css">
-	<script src="script/widget.js"></script>
+    <script src="script/widget.js"></script>
+    <script src="script/cart.js"></script>
 	<title>Page Ketiga</title>
     <style>
         *{
@@ -60,18 +61,22 @@
 </head>
 <body onload="updateClock(); updateDate(); setInterval(['updateClock()','updateDate()'], 1000)")>
     <div class="row">
-        <!-- Tabs -->
+        <!-- Checkout -->
         <div class="col s2 greydark" >
             <div id="checkout" class="col s12">
                 <p class="flow-text white-text middle">Checkout</p>
             </div>
-            <div class="row">
-                <div class="box col grey lighten-1 s12">
-                    <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
-                    <p class="white-text">Mauris sdsdsdsd dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+            <section class="container content-section">
+                <div class="cart-items">
                 </div>
-            </div>
+                <div class="cart-total">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">IDR 0</span>
+                </div>
+                <button class="btn btn-primary btn-purchase" type="button">CONFIRM</button>
+            </section>
         </div>
+
         <!-- navbar -->
         <div class="col s8">
             <nav class="nav-wrapper transparent nav-edit">
@@ -84,32 +89,31 @@
                     </ul>
                 </div>
             </nav>
+
             <div class="box col s12">
-                    <input class="white-text" type="text" id="myText" placeholder="Search..">
-                    <a class="btn" href="/pagekedua"">
-                        <i class="material-icons">arrow_back</i>
-                    </a>
-                    <button class="btn" onclick="myFunction(<%= type %>)">
-                        <i class="material-icons">search</i>
-                    </button>
+                <input class="white-text" type="text" id="myText" placeholder="Search..">
+                <a class="btn" href="/pagekedua"">
+                    <i class="material-icons">arrow_back</i>
+                </a>
+                <button class="btn" onclick="myFunction(<%= type %>)">
+                    <i class="material-icons">search</i>
+                </button>
                 <div id="card-container" class="row">
                     <% for (var i = 0; i < foods.length; i++) {%>
-                    <a href="" class="col s12 m3">
-                        <div class="card">
+                    <div class="col s12 m3">
+                        <div class="card shop-item">
                             <div class="card-image">
                                 <img src="images/placeholder.jpg">
                             </div>
-                            <div class="card-content">
-                                <p id="myName"><%= foods[i].name %></p>
-                            </div>
-                            <div class="card-action">
-                                <p id="myPrice<%= i %>"></p>
+                            <div class="shop-item-details card-content">
+                                <button class="btn-floating halfway-fab btn-primary shop-item-button" type=""><i class="material-icons">add</i></button>
+                                <div id="myName" class="card-title shop-item-title"><%= foods[i].name %></div>
+                                <span id="myPrice<%= i %>" class="shop-item-price"></span>
                             </div>
                         </div>  
-                    </a>
+                    </div>
                     <% } %>
                 </div>   
-
         </div>
     </div>
 	
@@ -161,7 +165,7 @@
     console.log(meme);
     function change_price(val, tipe) {
         <% for (var i = 0; i < foods.length; i++) { %>
-            document.getElementById('myPrice<%= i %>').innerText = meme[<%= i %>].price[val];
+            document.getElementById('myPrice<%= i %>').innerText = 'IDR '+meme[<%= i %>].price[val];
         <% } %>
     }
 </script>
