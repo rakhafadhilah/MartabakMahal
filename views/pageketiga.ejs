@@ -43,7 +43,8 @@
             height: 100%;
         }
         .btn{
-            background-color:grey;
+            height:12%;
+            text-transform: capitalize;
         }
         .lilspace{
             margin: 10px 0 10px 0;
@@ -55,7 +56,23 @@
             text-align: center;
             padding: 6px;
         }
-
+        .redhover{
+            background-color: white;
+            color: black;
+            transition: background-color 0.5s ease-out;
+        }
+        .redhover:hover{
+            background-color: red;
+        }
+        .middle{
+            margin: 0 auto 0 auto;
+        }
+        .lilspace{
+            margin: 10px 0 10px 0;
+        }
+        .white-border{
+            border: 2px solid white;
+        }
     </style>
 
 </head>
@@ -73,7 +90,7 @@
                     <strong class="cart-total-title">Total</strong>
                     <span class="cart-total-price">IDR 0</span>
                 </div>
-                <button class="btn btn-primary btn-purchase" type="button">CONFIRM</button>
+                <a class="redhover btn middle lilspace white-border" type="button">CONFIRM</a>
             </section>
         </div>
 
