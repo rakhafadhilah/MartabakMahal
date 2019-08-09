@@ -32,6 +32,7 @@
         }
         .tabs .tab a:focus, .tabs .tab a:focus.active{
             background-color:white;
+            font-weight: 700;
         }
         .tabs .indicator{
             background-color:red;
@@ -68,12 +69,8 @@
             color:white;
             margin-top: -10px;
         }
-        .gridbox{
+        .topgin{
             margin-top: 100px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            font-size: 2rem;
         }
         image{
             size:10%
@@ -83,7 +80,6 @@
         }
         .fullvh{
             width:100vw;
-            height:100vh;
         }
         .img{
             border: 5px solid black;
@@ -121,35 +117,18 @@
     </style>
 </head>
 <body onload="updateClock(); updateDate(); setInterval(['updateClock()','updateDate()'], 1000)">
-    <div class="row">
-        <!-- Tabs -->
-        <div class="col s3 black">
-            <ul class="tabs">
-                <li class="tab col s6 redhover">
-                    <a href="#recommended" class="active black-text">Recommended</a>
-                </li>
-                <li class="tab col s6 redhover">
-                    <a href="#recent" class="black-text">Recent</a>
-                </li>
-            </ul>
-            <div id="recommended" class="col black s12 oswald">
-                <ul>
-                <li class="btn col s12 lilspace redhover white-border" onclick="back()" ><span class="left">Manis</span><span class="right">S</span><br><span class="left">Nutella</span><span class="right">Rp131.000,-</span></li>
-                <li class="btn col s12 lilspace redhover white-border"><span class="left">Manis</span><span class="right">M</span><br><span class="left">Skippy Chunky</span><span class="right">Rp60.000,-</span></li>
-                <li class="btn col s12 lilspace redhover white-border"><span class="left">Manis</span><span class="right">L</span><br><span class="left">Tobleron</span><span class="right">Rp. 154.000</span></li>
-                <li class="btn col s12 lilspace redhover white-border"><span class="left">Klasik</span><span class="right">M</span><br><span class="left">Coklat Kacang Keju</span><span class="right">Rp. 180.000</span></li>
-                <li class="btn col s12 lilspace redhover white-border"><span class="left">Asin</span><span class="right">T</span><br><span class="left">Martabat Saya</span><span class="right">Rp. 200.000</span></li>
-                </ul>
+    <div class="row col s12">
+            <div class="col s3 black">
+                    <ul class="tabs">
+                        <li class="tab col s6 redhover">
+                            <a href="#recommended" class="active black-text">Recommended</a>
+                        </li>
+                        <li class="tab col s6 redhover">
+                            <a href="#recent" class="black-text">Recent</a>
+                        </li>
+                    </ul>
             </div>
-            <div id="recent" class="col black s12 oswald">
-                <a class="btn col s12 lilspace redhover white-border" ><span class="left">Manis</span><span class="right">L</span><br><span class="left">Tobleron</span><span class="right">Rp. 154.000</span></a>
-                <a class="btn col s12 lilspace redhover white-border" ><span class="left">Klasik</span><span class="right">M</span><br><span class="left">Coklat Kacang Keju</span><span class="right">Rp. 180.000</span></a>
-                <a class="btn col s12 lilspace redhover white-border" ><span class="left">Asin</span><span class="right">T</span><br><span class="left">Martabat Saya</span><span class="right">Rp. 200.000</span></a>
-            </div>
-        </div>
-        <!-- navbar -->
-        <div class="col fullvh s9">
-                <nav class="nav-wrapper red black-text nav-edit nopadding">
+            <nav class="nav-wrapper red black-text nav-edit nopadding">
                     <div>
                         <ul class="white-text flex-around">
                             <li class="">Terjual: <%= terjual %></li>
@@ -157,8 +136,29 @@
                             <li class="hide-on-med-and-down"><a id="date" href="">&nbsp;</a></li>
                         </ul>
                     </div>
-                </nav>
-                    <div class="gridbox col s12 center white-text bold">
+            </nav>
+    </div>
+    <div class="row">
+        <!-- Tabs -->
+            <div id="recommended" class="col black s3 oswald">
+                <ul>
+                    <li class="btn col s12 lilspace redhover white-border" onclick="back()" ><span class="left">Manis</span><span class="right">S</span><br><span class="left">Nutella</span><span class="right">Rp131.000,-</span></li>
+                    <li class="btn col s12 lilspace redhover white-border"><span class="left">Manis</span><span class="right">M</span><br><span class="left">Skippy Chunky</span><span class="right">Rp60.000,-</span></li>
+                    <li class="btn col s12 lilspace redhover white-border"><span class="left">Manis</span><span class="right">L</span><br><span class="left">Tobleron</span><span class="right">Rp. 154.000</span></li>
+                    <li class="btn col s12 lilspace redhover white-border"><span class="left">Klasik</span><span class="right">M</span><br><span class="left">Coklat Kacang Keju</span><span class="right">Rp. 180.000</span></li>
+                    <li class="btn col s12 lilspace redhover white-border"><span class="left">Asin</span><span class="right">T</span><br><span class="left">Martabat Saya</span><span class="right">Rp. 200.000</span></li>
+                </ul>
+            </div>
+            <div id="recent" class="col black s3 oswald">
+                <ul>
+                    <li class="btn col s12 lilspace redhover white-border" ><span class="left">Manis</span><span class="right">L</span><br><span class="left">Tobleron</span><span class="right">Rp. 154.000</span></li>
+                    <li class="btn col s12 lilspace redhover white-border" ><span class="left">Klasik</span><span class="right">M</span><br><span class="left">Coklat Kacang Keju</span><span class="right">Rp. 180.000</span></li>
+                    <li class="btn col s12 lilspace redhover white-border" ><span class="left">Asin</span><span class="right">T</span><br><span class="left">Martabat Saya</span><span class="right">Rp. 200.000</span></li>
+                </ul>
+            </div>
+        <!-- navbar -->
+        <div class="col s9 fullvh">
+                    <div class="col s12 center white-text bold row topgin">
                         <div class="col s4">
                             <a onclick="rasa(0)" class="pointer"><img src="images/salt.png" alt="" class="img responsive-img"></a>        
                             <p>Asin</p>
