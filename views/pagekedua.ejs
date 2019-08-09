@@ -13,12 +13,15 @@
 	<script src="script/widget.js"></script>
 	<title>Page Kedua</title>
     <style>
+        :root{
+            font-size: 16px;
+        }
         body{
             background-color:black;
         }
-        .mid-element{
-            text-align:center;
-            width:650px;
+        .screenflex{
+            display:flex;
+            flex-direction:row;
         }
         .nav-edit{
             height:47px;
@@ -26,25 +29,20 @@
         nav.nav-wrapper{
             line-height:45px;
         }
-        ul.tabs{
-            background-color:grey;
-        }
         .tabs .tab a:focus, .tabs .tab a:focus.active{
-            background-color:black;
+            background-color:white;
         }
         .tabs .indicator{
-            background-color:transparent;
+            background-color:red;
         }
         .box{
             background-color:grey;
             height: 150%;
             margin: 10px;
         }
-        .midpart{
-            background-color: #555;
-        }
         .btn{
-            height:15%;
+            height:12%;
+            text-transform: capitalize;
         }
         .lilspace{
             margin: 10px 0 10px 0;
@@ -52,26 +50,6 @@
         .searchBar{
             margin: 0 0 0 40px;
             padding: 0 0 0 40px;
-        }
-        .search-container{
-            color: #222222;
-            margin-top: 15px;
-            height: 50px;
-        }
-        .search-container input[type="text"]{
-            width: 90%;
-            padding-left: 20px;
-            background-color: #ffffff;
-        }
-        .search-container button {
-            float: right;
-            padding: 14px;
-            margin-right: 16px;
-            background: #ddd;
-            font-size: 17px;
-            border: none;
-            margin-top: 0;
-            cursor: pointer;
         }
         .darkgrey{
             background-color: #424242;
@@ -88,7 +66,6 @@
         .title{
             color:white;
             margin-top: -10px;
-            font-weight: 700;
         }
         .gridbox{
             margin-top: 200px;
@@ -99,66 +76,81 @@
         image{
             size:10%
         }
+        .fullvh{
+            width:100vw;
+            height:100vh;
+        }
         .img{
             border: 5px solid black;
             padding: 20px 10px 20px 10px;
             border-radius: 10%;
             background-color:white;
         }
-        .s3{
-            text-align:center;
-        }
-        .s3 p{
+        .bold{
             font-weight: 700;
-            color: white;
         }
-
+        .flex-around{
+            display: flex;
+            flex-direction:row;
+            justify-content: space-around;
+        }
+        .redhover{
+            background-color: white;
+            color: black;
+            transition: background-color 0.5s ease-out;
+        }
+        .white-border{
+            border: 2px solid white;
+        }
+        .redhover:hover{
+            background-color: red;
+        }
+        @media screen and (max-width: 1000px){
+            :root{
+                font-size: 13px;
+            }
+        }
     </style>
 </head>
 <body onload="updateClock(); updateDate(); setInterval(['updateClock()','updateDate()'], 1000)">
     <div class="row">
         <!-- Tabs -->
-        <div class="col s3">
+        <div class="col s3 black">
             <ul class="tabs">
-                <li class="tab col s6">
-                    <a href="#recommended" class="active white-text">Recommended</a>
+                <li class="tab col s6 redhover">
+                    <a href="#recommended" class="active black-text">Recommended</a>
                 </li>
-                <li class="tab col s6">
-                    <a href="#recent" class="white-text">Recent</a>
+                <li class="tab col s6 redhover">
+                    <a href="#recent" class="black-text">Recent</a>
                 </li>
             </ul>
-            <div id="recommended" class="col s12">
-                <a class="grey btn col s12 lilspace" onclick="back()" ><span class="left">Manis</span><span class="right">S</span><br><span class="left">Nutella</span><span class="right">Rp131.000,-</span></a>
-                <a class="grey btn col s12 lilspace"><span class="left">Manis</span><span class="right">M</span><br><span class="left">Skippy Chunky</span><span class="right">Rp60.000,-</span></a>
-                <a class="grey btn col s12 lilspace"><span class="left">Manis</span><span class="right">L</span><br><span class="left">Tobleron</span><span class="right">Rp. 154.000</span></a>
-                <a class="grey btn col s12 lilspace"><span class="left">Klasik</span><span class="right">M</span><br><span class="left">Coklat Kacang Keju</span><span class="right">Rp. 180.000</span></a>
-                <a class="grey btn col s12 lilspace"><span class="left">Asin</span><span class="right">T</span><br><span class="left">Martabat Saya</span><span class="right">Rp. 200.000</span></a>
+            <div id="recommended" class="col black s12">
+                <ul>
+                <li class="btn col s12 lilspace redhover white-border" onclick="back()" ><span class="left">Manis</span><span class="right">S</span><br><span class="left">Nutella</span><span class="right">Rp131.000,-</span></li>
+                <li class="btn col s12 lilspace redhover white-border"><span class="left">Manis</span><span class="right">M</span><br><span class="left">Skippy Chunky</span><span class="right">Rp60.000,-</span></li>
+                <li class="btn col s12 lilspace redhover white-border"><span class="left">Manis</span><span class="right">L</span><br><span class="left">Tobleron</span><span class="right">Rp. 154.000</span></li>
+                <li class="btn col s12 lilspace redhover white-border"><span class="left">Klasik</span><span class="right">M</span><br><span class="left">Coklat Kacang Keju</span><span class="right">Rp. 180.000</span></li>
+                <li class="btn col s12 lilspace redhover white-border"><span class="left">Asin</span><span class="right">T</span><br><span class="left">Martabat Saya</span><span class="right">Rp. 200.000</span></li>
+                </ul>
             </div>
-            <div id="recent" class="col s12">
-                <a class="grey btn col s12 lilspace"><span class="left">Manis</span><span class="right">L</span><br><span class="left">Tobleron</span><span class="right">Rp. 154.000</span></a>
-                <a class="grey btn col s12 lilspace"><span class="left">Klasik</span><span class="right">M</span><br><span class="left">Coklat Kacang Keju</span><span class="right">Rp. 180.000</span></a>
-                <a class="grey btn col s12 lilspace"><span class="left">Asin</span><span class="right">T</span><br><span class="left">Martabat Saya</span><span class="right">Rp. 200.000</span></a>
+            <div id="recent" class="col black s12">
+                <a class="btn col s12 lilspace redhover white-border" ><span class="left">Manis</span><span class="right">L</span><br><span class="left">Tobleron</span><span class="right">Rp. 154.000</span></a>
+                <a class="btn col s12 lilspace redhover white-border" ><span class="left">Klasik</span><span class="right">M</span><br><span class="left">Coklat Kacang Keju</span><span class="right">Rp. 180.000</span></a>
+                <a class="btn col s12 lilspace redhover white-border" ><span class="left">Asin</span><span class="right">T</span><br><span class="left">Martabat Saya</span><span class="right">Rp. 200.000</span></a>
             </div>
         </div>
         <!-- navbar -->
-        <div class="col s9">
-                <nav class="nav-wrapper transparent nav-edit">
+        <div class="col fullvh s9">
+                <nav class="nav-wrapper red black-text nav-edit nopadding">
                     <div>
-                        <ul class="white-text">
-                            <li class="left">Terjual: </li>
-							<li><a href=""><%= terjual %></a></li>
-                            <li><a id="clock" class="mid-element hide-on-med-and-down">&nbsp;</a></li>
-                            <li class="right hide-on-med-and-down"><a id="date" href="">&nbsp;</a></li>
+                        <ul class="white-text flex-around">
+                            <li class="">Terjual: <%= terjual %></li>
+                            <li><a id="clock" class="hide-on-med-and-down">&nbsp;</a></li>
+                            <li class="hide-on-med-and-down"><a id="date" href="">&nbsp;</a></li>
                         </ul>
                     </div>
                 </nav>
-
-                    <!-- GRID BOX
-                    EDITOR: MARIO
-                    KEKURANGAN: 1. MASIH BELOM ADA WARNA BACKGROUND 
-                                2. FONT NUTELLA MASIH BELOM SESUAI
-                                3. FOTO MARTABAK BELUM DIGANTI IMG-->
-                    <div class="gridbox col s12">
+                    <div class="gridbox col s12 center white-text bold">
                         <div class="col s3">
                             <a onclick="rasa(0)"><img src="images/salt.png" alt="" class="img responsive-img"></a>        
                             <p>Asin</p>
@@ -172,9 +164,6 @@
                             <p>Klasik</p>
                         </div>
                     </div>
-                    
-                </div>
-               
         </div>
     </div>
 
