@@ -85,16 +85,19 @@
                 </div>
             </nav>
             <div class="box col s12">
-
                     <input class="white-text" type="text" id="myText" placeholder="Search..">
-                    <button onclick="myFunction(<%= type %>)">Search</button>
+                    <a class="btn" href="/pagekedua"">
+                        <i class="material-icons">arrow_back</i>
+                    </a>
+                    <button class="btn" onclick="myFunction(<%= type %>)">
+                        <i class="material-icons">search</i>
+                    </button>
                 <div id="card-container" class="row">
                     <% for (var i = 0; i < foods.length; i++) {%>
-                    <a href="" class="col s12 m5">
-                        
+                    <a href="" class="col s12 m3">
                         <div class="card">
                             <div class="card-image">
-                                <!-- <img src="images/download.jpeg"> -->
+                                <img src="images/placeholder.jpg">
                             </div>
                             <div class="card-content">
                                 <p id="myName"><%= foods[i].name %></p>
@@ -161,10 +164,6 @@
             document.getElementById('myPrice<%= i %>').innerText = meme[<%= i %>].price[val];
         <% } %>
     }
-
-
-
-
 </script>
 </body>
 </html>
