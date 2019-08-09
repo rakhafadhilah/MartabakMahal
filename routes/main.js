@@ -3,6 +3,8 @@ var router = express.Router();
 var tools = require('../tools');
 var database = require('../database');
 
+var foodJSON = require('../databases/foods');
+
 
 // fitur utama
 
@@ -21,11 +23,12 @@ router.get('/pagekedua', function (req, res) {
 
 router.get('/pageketiga', function (req, res) {
     var foodArray = [];
+    var tmp = 0;
     var type = req.query.type || -1;
     var search = req.query.search || "";
 	foodArray = database.get_food_by_search(database.get_food_by_type(type),search);
 	var terjual = database.terjual();
-    res.render('pageketiga', {foods: foodArray, type: type, terjual: terjual});
+    res.render('pageketiga', {foods: foodArray, type: type, terjual: terjual, tmp, foodJSON});
 });
 
 router.get('/test', function (req, res) {

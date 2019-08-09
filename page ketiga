@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <title><%= windows.location.href%></title>
+    <style>
+        body{
+            background-color:black;
+        }
+        .mid-element{
+            text-align:center;
+            width:650px;
+        }
+        .nav-edit{
+            height:47px;
+        }
+        nav.nav-wrapper{
+            line-height:45px;
+        }
+        ul.tabs{
+            background-color:grey;
+        }
+        .tabs .tab a:focus, .tabs .tab a:focus.active{
+            background-color:black;
+        }
+        .tabs .indicator{
+            background-color:transparent;
+        }
+        .box{
+            background-color:grey;
+            height: 100%;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="row">
+        <!-- Tabs -->
+        <div class="col s3">
+            <ul class="tabs">
+                <li class="tab col s6">
+                    <a href="#recommended" class="active white-text">Recommended</a>
+                </li>
+                <li class="tab col s6">
+                    <a href="#recent" class="white-text">Recent</a>
+                </li>
+            </ul>
+            <div id="recommended" class="col s12">
+                <p class="flow-text white-text">Recommended</p>
+                <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
+                <p class="white-text">Mauris dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+            </div>
+            <div id="recent" class="col s12">
+                <p class="flow-text white-text">Recent</p>
+                <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
+                <p class="white-text">Mauris sdsdsdsd dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+            </div>
+        </div>
+        <!-- navbar -->
+        <div class="col s9">
+                <nav class="nav-wrapper transparent nav-edit">
+                    <div>
+                        <ul class="white-text">
+                            <li class="left">Terjual :</li>
+                            <li><a href="">42</a></li>
+                            <li><a href="" class="mid-element hide-on-med-and-down">4 : 20</a> </li>
+                            <li class="right hide-on-med-and-down"><a href="">Kamis, 12 Juli 2019</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="box col s12">
+                    <p class="white-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at lacus congue, suscipit elit nec, tincidunt orci.</p>
+                    <p class="white-text">Mauris sdsdsdsd dolor augue, vulputate in pharetra ac, facilisis nec libero. Fusce condimentum gravida urna, vitae scelerisque erat ornare nec.</p>
+                </div>
+        </div>
+    </div>
+
+
+   
+
+
+    
+<!-- Compiled and minified JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('.tabs').tabs();
+    })
+</script>
+</body>
+</html>

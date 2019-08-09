@@ -56,12 +56,7 @@
         }
 
     </style>
-    <script>
-        var tmp = 1;
-        function change_tmp(val) {
-            tmp = val;
-        }
-    </script>
+
 </head>
 <body onload="updateClock(); updateDate(); setInterval(['updateClock()','updateDate()'], 1000)")>
     <div class="row">
@@ -95,20 +90,20 @@
                     <button onclick="myFunction(<%= type %>)">Search</button>
                 <div id="card-container" class="row">
                     <% for (var i = 0; i < foods.length; i++) {%>
-                    <div class="col s12 m5">
+                    <a href="" class="col s12 m5">
                         
                         <div class="card">
                             <div class="card-image">
                                 <!-- <img src="images/download.jpeg"> -->
                             </div>
                             <div class="card-content">
-                                <p><%= foods[i].name %></p>
+                                <p id="myName"><%= foods[i].name %></p>
                             </div>
                             <div class="card-action">
-                                <p><%= foods[i].price[2]%></p>
+                                <p id="myPrice<%= i %>"></p>
                             </div>
                         </div>  
-                    </div>
+                    </a>
                     <% } %>
                 </div>   
 
@@ -117,10 +112,10 @@
 	
     <div class="col s2">
         <h3 class="white-text" style="padding-left: 10px">Varian</h3>
-        <button class="waves-effect waves-light btn col s12 lilspace active" onclick=''>Tipis</a>
-        <button class="waves-effect waves-light btn col s12 lilspace" onclick=''>Medium</a>
-        <button class="waves-effect waves-light btn col s12 lilspace" onclick=''>Large</a>
-        <button class="waves-effect waves-light btn col s12 lilspace" onclick=''>Spesial</a>
+        <button class="waves-effect waves-light btn col s12 lilspace active" onclick='change_price(0, <%= type %>)'>Tipis</a>
+        <button class="waves-effect waves-light btn col s12 lilspace" onclick='change_price(1, <%= type %>)'>Medium</a>
+        <button class="waves-effect waves-light btn col s12 lilspace" onclick='change_price(2, <%= type %>)'>Large</a>
+        <button class="waves-effect waves-light btn col s12 lilspace" onclick='change_price(3, <%= type %>)'>Spesial</a>
     </div>
     
 <!-- Compiled and minified JavaScript -->
@@ -142,6 +137,12 @@
 		}
 		
     })
+
+    var foodJSON = '<%- JSON.stringify(foodJSON); %>';
+    console.log(foodJSON);
+
+    var OBJ_food = JSON.parse(foodJSON);
+    console.log(OBJ_food);
 	
 	function myFunction(type) {
 		var x = document.getElementById("myText").value;
@@ -149,7 +150,20 @@
 		
 		var queries = "&search="+String(x);
 		window.location.href = "pageketiga?type=" + type + queries; 
-	}
+    }
+    console.log(<%= tmp %>);
+    let meme = OBJ_food.foods.filter((hehe) => {
+        return hehe.type == <%= type %>;
+    })
+    console.log(meme);
+    function change_price(val, tipe) {
+        <% for (var i = 0; i < foods.length; i++) { %>
+            document.getElementById('myPrice<%= i %>').innerText = meme[<%= i %>].price[val];
+        <% } %>
+    }
+
+
+
 
 </script>
 </body>
