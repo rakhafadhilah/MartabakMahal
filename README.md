@@ -1,13 +1,18 @@
 # Project Title
 
-The title of this project is MartabakBandung, by php08. 
+The title of this project is **MartabakBandung**, by php08. (although it is codenamed *MartabakMahal* due to the price of the martabak) 
 
 This project is a minimum viable product (MVP) of a POS project dedicated to simplify a cashier UI on Martabak San Francisco franchise.
 
 ## Getting Started
 
+> If I have seen further it is by standing on the shoulders of Giants
+> Sir Isaac Newton
+
 Repo: https://github.com/rzkyif/MartabakMahal
-Feel free to git pull m8 UwU 
+
+Feel free to git pull m8 UwU
+ 
 ~php08
 
 ### Prerequisites

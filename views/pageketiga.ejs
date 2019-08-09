@@ -116,9 +116,11 @@
             <div class="box col s12">
                 <div class="searchbar">
                     <input class="white-text searchbox" type="text" id="myText" placeholder="Search..">
-                    <button class="btn redhover black-text white-border" onclick="myFunction(<%= type %>)">
-                        <i class="material-icons">search</i>
-                    </button>
+                    <div class="center-align">
+                        <button class="btn-small redhover black-text white-border" onclick="myFunction(<%= type %>)">
+                            <i class="material-icons">search</i>
+                        </button>
+                    </div>
                 </div>
                 <div id="card-container" class="row">
                     <% for (var i = 0; i < foods.length; i++) {%>
