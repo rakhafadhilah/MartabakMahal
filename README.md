@@ -6,13 +6,14 @@ This project is a minimum viable product (MVP) of a POS project dedicated to sim
 
 ## Getting Started
 
-> If I have seen further it is by standing on the shoulders of Giants
-> Sir Isaac Newton
+> *If I have seen further it is by standing on the shoulders of Giants*
+>
+> ***Sir Isaac Newton***
 
 Repo: https://github.com/rzkyif/MartabakMahal
 
 Feel free to git pull m8 UwU
- 
+
 ~php08
 
 ### Prerequisites
