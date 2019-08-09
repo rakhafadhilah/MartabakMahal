@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/widget-style.css">
     <script src="script/widget.js"></script>
     <script src="script/cart.js"></script>
@@ -55,26 +56,31 @@
             text-align: center;
             padding: 6px;
         }
-
     </style>
-
 </head>
 <body onload="updateClock(); updateDate(); setInterval(['updateClock()','updateDate()'], 1000)")>
     <div class="row">
         <!-- Checkout -->
-        <div class="col s2 greydark" >
-            <div id="checkout" class="col s12">
-                <p class="flow-text white-text middle">Checkout</p>
+        <div class="col s2 greydark" style="min-height:100%">
+            <!-- <div id="checkout" class="col s12"> -->
+            <p class="flow-text white-text middle">Checkout</p>
+            <!-- </div> -->
+            <div class="cart-items" style="min-height:80%; background-color: #424242; overflow:scroll; margin-bottom: 10px;">
+                <div class="card">
+                    <div class="card-container">
+                        <div class="card-title">
+                            <p>saya halu</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <section class="container content-section">
-                <div class="cart-items">
-                </div>
-                <div class="cart-total">
-                    <strong class="cart-total-title">Total</strong>
-                    <span class="cart-total-price">IDR 0</span>
-                </div>
-                <button class="btn btn-primary btn-purchase" type="button">CONFIRM</button>
-            </section>
+            
+            <div class="center-align">
+                <a class="cart-total btn btn-primary btn-purchase" type="button" style="min-height:10%;">
+                    <p class="cart-total-price center-align">IDR 0</p>
+                    <p>CONFIRM</p>
+                </a>
+            </div>
         </div>
 
         <!-- navbar -->
