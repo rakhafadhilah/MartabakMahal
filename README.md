@@ -19,21 +19,19 @@ Feel free to git pull m8 UwU
 
 Before pulling or running the project, it is necessary to install the following:
 * nodejs: https://nodejs.org/en/download/
+
+You can just follow the instructions.
+
 * node package manager: https://www.npmjs.com/package/download/
 
-Say what the step will be
-
+1. Run cmd on the folder
+2. Run the following code: 
 ```
-Give the example
+C:\Users\dir> npm install
 ```
+3. Boom
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
+After installing the two, you can proceed to run the project!
 
 ## Running the tests
 
@@ -59,7 +57,7 @@ Give an example
 
 ## Deployment
 
-We do not deploy this project online (using node.js to run local server). But if we are going to deploy the project, we will use heroku (https://www.heroku.com/) to build, run,and operate the project through the cloud.
+We do not deploy this project online (using node.js to run local server). But if we are going to deploy the project, we will use heroku (https://www.heroku.com/) to build, run, and operate the project through the cloud.
 
 ## Built With
 
@@ -88,7 +86,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * **Muhammad Fauzan Rafi Sidiq Widjonarto** - *Backend* - [mufraswid](https://github.com/mufraswid)
 * **Tifany Angelia** - *Front end* - [tifangel](http://github.com/tifangel)
 * **Rakha Fadhilah** - *Front end* - [rakhafadhilah](http://github.com/rakhafadhilah)
-* **Ryan Daniel** - ** - []()
+* **Ryan Daniel** - *Front end* - [ryndnlp](http://github.com/ryndnlp)
 * **Muhammad Ravid Valiandi** - ** - []()
 * **Raihan Faturrahman** - ** - []()
 * **Daniel Neolando Hutabalian** - *Front end* - [danielhutabalian](https://github.com/danielhutabalian)
@@ -104,7 +102,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Huge thanks to @bhanushali.mahesh3 for beautiful insights on ejs and expressjs 
+* Huge thanks to @bhanushali.mahesh3 for **beautiful** insights on ejs and expressjs 
 (https://medium.com/@bhanushali.mahesh3/creating-a-simple-website-with-node-js-express-and-ejs-view-engine-856382a4578f)
-
-* 
