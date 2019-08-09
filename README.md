@@ -1,18 +1,18 @@
-# Project Title
+# MartabakBandung
 
 The title of this project is **MartabakBandung**, by php08. (although it is codenamed *MartabakMahal* due to the price of the martabak) 
 
-This project is a minimum viable product (MVP) of a POS project dedicated to simplify a cashier UI on Martabak San Francisco franchise.
+This project is a minimum viable product (MVP) of a POS project dedicated to simplify the cashier UI of Martabak San Francisco franchise.
 
 ## Getting Started
 
-> *If I have seen further it is by standing on the shoulders of Giants*
+> If I have seen further, it is by standing on the shoulders of StackOverflow
 >
-> ***Sir Isaac Newton***
+> **Sir Ojan**
 
 Repo: https://github.com/rzkyif/MartabakMahal
 
-Feel free to git pull m8 UwU
+Feel free to git pull m8 UwU, don't forget to buy the *cheap* martabak
 
 ~php08
 
@@ -41,7 +41,13 @@ After installing the two, you can proceed to run the project!
 
 ## Running the tests
 
-Procedure on running the source code testing:
+Before running the tests, don't forget to run the server using node.js
+
+```
+C:\Users\dir> node server
+```
+
+Standard procedure on running the source code testing:
 * edit the possibly faulty code
 * test from either live server or using node server.js
 
@@ -63,7 +69,7 @@ Give an example
 
 ## Deployment
 
-We do not deploy this project online (using node.js to run local server). But if we are going to deploy the project, we will use heroku (https://www.heroku.com/) to build, run, and operate the project through the cloud.
+We do not deploy this project online (using node.js to run local server). But if we are going to deploy the project, we will use [heroku] (https://www.heroku.com/) to build, run, and operate the project through the cloud.
 
 ## Built With
 
@@ -86,17 +92,17 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * **Michel Fang** - *Vice, Front end* - [littlemight](https://github.com/littlemight)
 * **Annisa Ayu Pramesti** - *Front end* - [nisaprmst](https://github.com/nisaprmst)
 * **Bambang Haryo Pramudio Bagus Anggito** - *Backend* - [bambangharyopba](https://github.com/bambangharyopba)
-* **Rifaldy Aristya Kelana** - *Front End* - [rifaldyaristya](https://github.com/rifaldyaristya)
+* **Rifaldy Aristya Kelana** - *Front end* - [rifaldyaristya](https://github.com/rifaldyaristya)
 * **Jon Felix Germinian** - *Backend* - [jonfelix1](https://github.com/jonfelix1)
 * **Mario Gunawan** - *Front End styler* - [margunwan](https://github.com/margunwan)
 * **Muhammad Fauzan Rafi Sidiq Widjonarto** - *Backend* - [mufraswid](https://github.com/mufraswid)
 * **Tifany Angelia** - *Front end* - [tifangel](http://github.com/tifangel)
 * **Rakha Fadhilah** - *Front end* - [rakhafadhilah](http://github.com/rakhafadhilah)
 * **Ryan Daniel** - *Front end* - [ryndnlp](http://github.com/ryndnlp)
-* **Muhammad Ravid Valiandi** - ** - []()
-* **Raihan Faturrahman** - ** - []()
+* **Muhammad Ravid Valiandi** - *Front end* - []()
+* **Raihan Faturrahman** - *Front end*
 * **Daniel Neolando Hutabalian** - *Front end* - [danielhutabalian](https://github.com/danielhutabalian)
-* **Izharulhaq** - ** - [izharulhaq78](https://github.com/izharulhaq78)
+* **Izharulhaq** - *Insights* - [izharulhaq78](https://github.com/izharulhaq78)
 * **Byan Sakura Kireyna Aji** - ** - []()
 * **Arya Beri Argya Rasidi** - ** - []()
 

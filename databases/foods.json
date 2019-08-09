@@ -46,7 +46,7 @@
 			"type": "2",
             "price": ["40000","55000","65000","90000"],
             "mengandung_susu": true,
-			"terjual": 13
+			"terjual": 33
         },
         {
             "id": 6,
@@ -54,7 +54,7 @@
 			"type": "2",
             "price": ["100000","105000","120000","130000"],
             "mengandung_susu": true,
-			"terjual": 13
+			"terjual": 10
         },
         {
             "id": 7,
@@ -63,6 +63,22 @@
             "price": ["50000","65000","70000","80000"],
             "mengandung_susu": true,
 			"terjual": 13
+        },
+        {
+            "id": 8,
+            "name": "Martabak Asin",
+			"type": "0",
+            "price": ["45000","65000","75000","95000"],
+            "mengandung_susu": false,
+			"terjual": 10
+        },
+        {
+            "id": 9,
+            "name": "Martabak Labtek Ve",
+			"type": "0",
+            "price": ["50000","65000","70000","80000"],
+            "mengandung_susu": false,
+			"terjual": 0
         }
     ]
 }
