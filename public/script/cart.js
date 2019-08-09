@@ -24,13 +24,12 @@ function start() {
         var button = addToCartButtons[i]
         button.addEventListener('click', addToCartClicked)
     }
-
     document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
 }
 
 function purchaseClicked() {
     var cartItems = document.getElementsByClassName('cart-items')[0]
-    while (cartItems.hasChildNodes()) {
+    while (cartItems[0].hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
     }
     updateCartTotal()
@@ -62,6 +61,9 @@ function addToCartClicked(event) {
 function addItemToCart(title, price) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
+    cartRow.classList.add('card')
+    cartRow.classList.add('row')
+    cartRow.classList.add('cart-item')
     var cartItems = document.getElementsByClassName('cart-items')[0]
     var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
     for (var i = 0; i < cartItemNames.length; i++) {
@@ -70,13 +72,11 @@ function addItemToCart(title, price) {
         }
     }
     var cartRowContents = `
-        <div class="cart-item cart-column">
-            <span class="cart-item-title">${title}</span>
-        </div>
-        <span class="cart-price cart-column">${price}</span>
-        <div class="cart-quantity cart-column row input-field white">
+        <div class="card-content">
+            <p style="font-size: 16px;" class="cart-item-title">${title}</p>
+            <p class="cart-price" style="font-size: 14px;">${price}</p>
             <input class="cart-quantity-input col s10" type="number" value="1">
-            <button class="btn-small btn-danger" type="button">x</button>
+            <button class="btn-small btn-danger col s2" type="button">x</button>
         </div>`
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)

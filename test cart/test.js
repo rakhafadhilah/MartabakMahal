@@ -69,6 +69,7 @@ function addItemToCart(title, price) {
             return
         }
     }
+
     var cartRowContents = `
         <div class="cart-item cart-column">
             <span class="cart-item-title">${title}</span>
