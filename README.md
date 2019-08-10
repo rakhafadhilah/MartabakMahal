@@ -47,9 +47,10 @@ C:\Users\dir> npm install
 
 Aplikasi POS 'Martabak Mahal' telah dijalankan pada port 3000!
 ```
-4. Open b
+4. Open browser and type on the navbar "localhost:3000"
+5. You can proceed to run the project!
 
-After installing the two, you can proceed to run the project!
+*note: to login, use **user:admin** **password:password***
 
 ## Running the tests
 
