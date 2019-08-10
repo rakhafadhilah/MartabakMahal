@@ -30,13 +30,24 @@ Before pulling or running the project, it is necessary to install the following:
 You can just follow the instructions.
 
 * node package manager: https://www.npmjs.com/package/download/
+(download on )
 
-1. Run cmd on the folder
-2. Run the following code: 
+Steps: 
+
+1. Clone the repository to the folder you want to host, using git bash
+
+```
+user@userComputer MING64 ~/dir git clone https://github.com/rzkyif/MartabakMahal
+```
+
+2. Run cmd on the specific folder
+3. Run the following code on cmd:
 ```
 C:\Users\dir> npm install
+
+Aplikasi POS 'Martabak Mahal' telah dijalankan pada port 3000!
 ```
-3. Boom
+4. Open b
 
 After installing the two, you can proceed to run the project!
 
