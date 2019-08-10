@@ -80,10 +80,6 @@ We do not deploy this project online (using node.js to run local server). But if
 
 Please read [PHP_Logwork](https://drive.google.com/open?id=17J-5R0Q66e078jtNfzasNWHildV2JX9G) for details on our contributions for this project.
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
 ## Authors
 
 * **Muhammad Rizky Ismail Faizal** - *Coordinator, Mainly backend* - [rzkyif](https://github.com/rzkyif)
