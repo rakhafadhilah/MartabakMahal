@@ -71,13 +71,13 @@ We do not deploy this project online (using node.js to run local server). But if
 ## Built With
 
 * [Materialize](https://materializecss.com/) - A modern responsive front-end framework based on Material Design
-* [nodejs](https://nodejs.org) - JavaScript runtime built on Chrome's V8 JavaScript 
+* [Node.js](https://nodejs.org) - JavaScript runtime built on Chrome's V8 JavaScript 
 * [expressjs](https://expressjs.com) - Fast, unopinionated, minimalist web framework for Node.js
 * [ejs](https://ejs.co/) - Embedded JavaScript templating. 
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [PHP_Logwork](https://drive.google.com/open?id=17J-5R0Q66e078jtNfzasNWHildV2JX9G) for details on our contributions for this project.
 
 ## Versioning
 
