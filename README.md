@@ -42,7 +42,7 @@ After installing the two, you can proceed to run the project!
 
 ## Running the tests
 
-Before running the tests, don't forget to run the server using node.js
+Before running the tests, don't forget to run the server using node.js:
 
 ```
 C:\Users\dir> node server
@@ -52,7 +52,6 @@ Standard procedure on running the source code testing:
 1. edit the possibly faulty code
 2. test from either live server or using node server.js to evaluate
 3. if necessary, repeat steps one and two
-
 
 ## Deployment
 
