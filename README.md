@@ -102,10 +102,6 @@ Please read [PHP_Logwork](https://drive.google.com/open?id=17J-5R0Q66e078jtNfzas
 
 For simplicity, this is the list of [contributors](https://github.com/rzkyif/MartabakMahal/contributors) who participated in this project.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
 ## Acknowledgments
 
 * Huge thanks to @bhanushali.mahesh3 for **beautiful** insights on ejs and expressjs 
